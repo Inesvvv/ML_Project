@@ -11,8 +11,8 @@ Group machine-learning project. We compare six classifier families for detecting
 1. Grouped 80/20 split by subject ID (603 train / 153 test recordings)
 2. Highly correlated features removed (753 → 539), fit on training data only
 3. Optional mutual-information feature selection or PCA, fit on training data only
-4. Hyperparameter search with grouped 5-fold CV, optimising mean ROC-AUC
-5. Retrain on the full training set, evaluate once on held-out test subjects, then analyse thresholds
+4. Hyperparameter search with grouped 5-fold CV, optimizing mean ROC-AUC
+5. Retrain on the full training set, evaluate once on held-out test subjects, then analyze thresholds
 
 ## Results (held-out test subjects)
 
@@ -22,7 +22,7 @@ Group machine-learning project. We compare six classifier families for detecting
 | Random forest | Grid: n_estimators × depth | 0.928 | `random_forest_FINAL.ipynb` |
 | Logistic regression + PCA (95% variance, 170 components) | C, penalty, class weight | 0.902 | `Logistic_Regression_PCA.ipynb`, `Logistic_Regression_Tuning.ipynb` |
 | Neural network (4 layers) | Optuna TPE, 50 trials | 0.879 | `hyperparameter_tuning_neuralnet_FINAL.ipynb` |
-| k-nearest neighbours | k, weighting, metric | 0.864 | `knn_Model_FINAL.ipynb` |
+| k-nearest neighbors | k, weighting, metric | 0.864 | `knn_Model_FINAL.ipynb` |
 | Bagged decision trees | Grid: n_estimators × depth (CV ROC-AUC 0.809) | — | `random_forest_FINAL.ipynb` |
 
 **Takeaways**
